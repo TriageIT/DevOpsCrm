@@ -1,0 +1,38 @@
+body {
+
+          font-family : Century Gothic;
+          font-size : 0.9em;
+          text-align : left;
+          color : #000080;
+      }
+
+a {
+          color : blue;
+          font-weight : bold;
+          text-decoration : none;
+      }
+a:visited {
+          color : #8a3207;
+      }
+a:hover {
+          color : #753206;
+          text-decoration : underline;
+      }
+
+p {
+	color: blue;
+}
+h1, h2, h3, h4 {
+          font-family : Century Gothic;
+          font-weight : bold;
+          letter-spacing : 1px;
+          color : #000080;
+      }
+#header h1 {
+          margin : 0;
+          font-size : 1.6em;
+          padding : 10px 20px 0 0;
+          text-align : right;
+          color : #000080;
+
+      }

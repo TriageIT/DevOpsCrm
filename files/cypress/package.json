@@ -1,0 +1,19 @@
+{
+  "name": "cypress",
+  "version": "0.0.1",
+  "description": "CRM",
+  "main": "crm.js",
+  "scripts": {
+    "test": "go"
+  },
+  "repository": {
+    "type": "git",
+    "url": "go"
+  },
+  "keywords": [
+    "go"
+  ],
+  "author": "PWM",
+  "license": "BSD-2-Clause",
+  "devDependencies": {}
+}
