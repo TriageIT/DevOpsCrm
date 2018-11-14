@@ -1,0 +1,49 @@
+#Eerst gaan we wat variabelen definiëren
+variables:
+  AWS_DEFAULT_REGION: "us-east-2"
+  S3_BUCKET_NAME: "aws-website-triageitcrm-111018"
+  EC2_INSTANDE_ID: "i-07e0dfb42aa0da01e"
+
+stages:
+  - build
+  - test
+  - run
+
+# We beginnen met een alpine docker container
+image: alpine
+
+before_script:
+  - apk update
+  - apk add py-pip
+  - pip install -r requirements.txt
+  - pip install awscli --upgrade --user
+
+after_script:
+  - echo "After script section"
+  - echo "For example you might do some cleanup here"
+
+
+build:
+  stage: build
+  script:
+    - echo "bouwen van de docker container"
+# code voor runnen dockerfile
+
+test1:
+  stage: test
+  script:
+    - echo "Do a test here"
+    - echo "For example run a test suite"
+
+test2:
+  stage: test
+  script:
+    - echo "Do another parallel test here"
+    - echo "For example run a lint test"
+
+deploy1:
+  stage: run
+  script:
+    - aws ec2 start-instances --instance-ids $EC2_INSTANDE_ID
+#   Hier moet de artifact worden gepulled uit dockerhub
+#    - sudo docker pull paultriage/devops:v1
