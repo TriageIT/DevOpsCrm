@@ -10,7 +10,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  imageName: 'pwtriageit/CRM:$(build.buildId)'
+  imageName: 'pwtriageit/crm:$(build.buildId)'
 
 steps:
 - script: docker login -u $(dockerId) -p $(dockerPassword)
